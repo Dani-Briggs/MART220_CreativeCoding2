@@ -1,17 +1,19 @@
 //setting up
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(displayWidth, displayHeight);
+  fill(100,100,29);
 }
 
 function draw() {
-  background(220);
-
+  //text
+  text('Homework 2', 10, -5);
+  text('Dani Briggs', 990, 3);
   //circle
-  circle(30,40,50);
+  circle(330,40,50);
 
  //square
-  square(30,40,50);
+  square(170,0,50);
 
   //rect
-  rect(30,40,50,60);
+  rect(0,0,50,60);
 }

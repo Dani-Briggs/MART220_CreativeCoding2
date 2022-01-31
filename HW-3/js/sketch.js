@@ -13,6 +13,7 @@ var mX = 100;
 var mY = 25;
 var rectX = 0;
 var rectY = 0;
+
 //setting up
 function setup() {
   createCanvas(800, 500);
@@ -24,15 +25,15 @@ function draw() {
   background(200);
   fill(r,g,b);
   //text
-  text('Homework 2', 10, 21);
+  text('Homework 3', 10, 21);
   text('Dani Briggs', 650, 490);
 
-  //Square
+  //Square --> makes into the paddles...maybe
   fill(100,100,29);
   square(mX, mY, 60);
 
 
-  //circle
+  //circle --> get a ball img for this
   fill(150,60,29);
   circle(x, y, size);
   //if statements for circle
@@ -79,6 +80,7 @@ function draw() {
   backButton();
 }
 
+//try to fix this
 function moveRect(){
   //rect will move with wasd
   //rect
@@ -86,16 +88,16 @@ function moveRect(){
   rect(320, 420, 40, 70);
   if(keyIsPressed){
     if(key == 'a'){
-      rectX=-5;
+      rectX-=5;
     }
     else if (key == 'd') {
-      rectX=+5;
+      rectX+=5;
     }
     else if (key == 'w') {
-      rectY=-5;
+      rectY-=5;
     }
     else if (key == 's') {
-      rectY=+5;
+      rectY+=5;
     }
   }
 }

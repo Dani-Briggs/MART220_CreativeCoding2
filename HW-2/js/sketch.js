@@ -86,16 +86,16 @@ function moveRect(){
   rect(320, 420, 40, 70);
   if(keyIsPressed){
     if(key == 'a'){
-      rectX=-5;
+      rectX-=5;
     }
     else if (key == 'd') {
-      rectX=+5;
+      rectX+=5;
     }
     else if (key == 'w') {
-      rectY=-5;
+      rectY-=5;
     }
     else if (key == 's') {
-      rectY=+5;
+      rectY+=5;
     }
   }
 }

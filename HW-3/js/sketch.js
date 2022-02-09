@@ -39,7 +39,7 @@ function draw() {
   text('Homework 3', 10, 21);
   text('Dani Briggs', 650, 490);
 
-  //Square --> makes into the star 
+  //Square --> makes into the star
   //  fill(100,100,29);
   image(star, 0, 0);
 
@@ -86,18 +86,18 @@ function draw() {
   mX = mY + speedX;
   mY = mX + speedY;
 
-  moveRect();
+  moveRocket();
 
   backButton();
 }
 
 //try to fix this
 //change to moveRocket
-function moveRect(){
+function moveRocket(){
   //rect will move with wasd
   //rect
   fill(20,100,29);
-  rect(320, 420, 40, 70);
+  image(rocket,rectX, rectY, 40, 70);
   if(keyIsPressed){
     if(key == 'a'){
       rectX-=5;

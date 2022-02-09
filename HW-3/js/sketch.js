@@ -18,6 +18,8 @@ var rocket;
 var star;
 var img;
 var timerValue = 10;
+var timerX = 750;
+var timerY = 25;
 
 //for images to show start sever
 function preload() {
@@ -44,21 +46,22 @@ function draw() {
   text('Homework 3', 10, 21);
   text('Dani Briggs', 650, 490);
 
-  //timer
-  if(timerValue >= 10){
-    text("0:" + timerValue, width /2, height /2);
-  }
-  if(timerValue < 10){
-    text("0:0" + timerValue, width /2, height /2);
-  }
-  if(timerValue == 0){
-    text("game over", width /2, height /2 + 15);
-  }
 
   //Square --> makes into the star
   //  fill(100,100,29);
   image(star, 0, 0);
-
+  //timer
+  if(timerValue >= 10){
+    text("0:" + timerValue, timerX, timerY);
+  }
+  if(timerValue < 10){
+    text("0:0" + timerValue, timerX, timerY );
+  }
+  if(timerValue == 0){
+    fill(200,0,0);
+    textSize(76);
+    text("game over", width / 2 - 167, height / 2);
+  }
 
   //circle --> get a meteor img for this
   //fill(150,60,29);

@@ -23,7 +23,7 @@ function preload() {
   meteor = loadImage('assets/meteor.png');
   rocket = loadImage('assets/rocket.png');
   star = loadImage('assets/star.png');
-  myFont = loadFont('SupermercadoOne-Regular.ttf');
+  myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 }
 
 

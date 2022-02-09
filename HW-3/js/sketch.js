@@ -23,6 +23,7 @@ function preload() {
   meteor = loadImage('assets/meteor.png');
   rocket = loadImage('assets/rocket.png');
   star = loadImage('assets/star.png');
+  myFont = loadFont('SupermercadoOne-Regular.ttf');
 }
 
 
@@ -37,6 +38,7 @@ function draw() {
   background(200);
   fill(r,g,b);
   //text
+  textFont(myFont);
   text('Homework 3', 10, 21);
   text('Dani Briggs', 650, 490);
 

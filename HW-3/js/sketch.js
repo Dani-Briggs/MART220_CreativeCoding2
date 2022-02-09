@@ -39,7 +39,7 @@ function draw() {
   text('Homework 3', 10, 21);
   text('Dani Briggs', 650, 490);
 
-  //Square --> makes into the rocket
+  //Square --> makes into the star 
   //  fill(100,100,29);
   image(star, 0, 0);
 

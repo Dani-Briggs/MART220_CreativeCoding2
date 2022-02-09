@@ -13,6 +13,14 @@ var mX = 100;
 var mY = 25;
 var rectX = 0;
 var rectY = 0;
+var meteorImg;
+var rocketImg;
+var starImg;
+
+function preload() {
+  img = loadImage('assets/meteor.png');
+}
+
 
 //setting up
 function setup() {

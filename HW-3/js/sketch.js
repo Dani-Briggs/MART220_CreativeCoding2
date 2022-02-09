@@ -18,6 +18,7 @@ var rocket;
 var star;
 var img;
 
+//for images to show start sever
 function preload() {
   meteor = loadImage('assets/meteor.png');
   rocket = loadImage('assets/rocket.png');

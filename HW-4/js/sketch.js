@@ -13,28 +13,59 @@ var mX = 100;
 var mY = 25;
 var rectX = 0;
 var rectY = 0;
+var meteor;
+var rocket;
+var star;
+var img;
+var timerValue = 10;
+var timerX = 750;
+var timerY = 25;
+
+//for images to show start sever
+function preload() {
+  meteor = loadImage('assets/meteor.png');
+  rocket = loadImage('assets/rocket.png');
+  star = loadImage('assets/star.png');
+  myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
+}
+
+
 //setting up
 function setup() {
   createCanvas(800, 500);
   speedX = random(1,10);
   speedY = random(1,10);
+  setInterval(timeIt, 1000);
 }
 
 function draw() {
   background(200);
   fill(r,g,b);
   //text
-  text('Homework 2', 10, 21);
+  textFont(myFont);
+  text('Homework 3', 10, 21);
   text('Dani Briggs', 650, 490);
 
-  //Square
-  fill(100,100,29);
-  square(mX, mY, 60);
 
+  //Square --> makes into the star
+  //  fill(100,100,29);
+  image(star, 0, 0);
+  //timer
+  if(timerValue >= 10){
+    text("0:" + timerValue, timerX, timerY);
+  }
+  if(timerValue < 10){
+    text("0:0" + timerValue, timerX, timerY );
+  }
+  if(timerValue == 0){
+    fill(200,0,0);
+    textSize(76);
+    text("game over", width / 2 - 167, height / 2);
+  }
 
-  //circle
-  fill(150,60,29);
-  circle(x, y, size);
+  //circle --> get a meteor img for this
+  //fill(150,60,29);
+  image(meteor, x, y, size);
   //if statements for circle
   if (x >= 800){
     speedX = (1,10);
@@ -74,16 +105,18 @@ function draw() {
   mX = mY + speedX;
   mY = mX + speedY;
 
-  moveRect();
+  moveRocket();
 
   backButton();
 }
 
-function moveRect(){
+//try to fix this
+//change to moveRocket
+function moveRocket(){
   //rect will move with wasd
   //rect
   fill(20,100,29);
-  rect(320, 420, 40, 70);
+  image(rocket,rectX, rectY, 40, 70);
   if(keyIsPressed){
     if(key == 'a'){
       rectX-=5;
@@ -100,6 +133,11 @@ function moveRect(){
   }
 }
 
+function timeIt() {
+  if (timerValue > 0) {
+    timerValue--;
+  }
+}
 
 //backbutton
 function backButton(){

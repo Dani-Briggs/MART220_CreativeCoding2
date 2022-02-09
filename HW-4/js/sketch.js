@@ -43,7 +43,7 @@ function draw() {
   fill(r,g,b);
   //text
   textFont(myFont);
-  text('Homework 3', 10, 21);
+  text('Homework 4', 10, 21);
   text('Dani Briggs', 650, 490);
 
 

@@ -13,18 +13,6 @@ var mX = 100;
 var mY = 25;
 var rectX = 0;
 var rectY = 0;
-var meteor;
-var rocket;
-var star;
-var img;
-
-function preload() {
-  meteor = loadImage('assets/meteor.png');
-  rocket = loadImage('assets/rocket.png');
-  star = loadImage('assets/star.png');
-}
-
-
 //setting up
 function setup() {
   createCanvas(800, 500);
@@ -36,17 +24,17 @@ function draw() {
   background(200);
   fill(r,g,b);
   //text
-  text('Homework 3', 10, 21);
+  text('Homework 2', 10, 21);
   text('Dani Briggs', 650, 490);
 
-  //Square --> makes into the rocket
-  //  fill(100,100,29);
-  image(star, 0, 0);
+  //Square
+  fill(100,100,29);
+  square(mX, mY, 60);
 
 
-  //circle --> get a meteor img for this
-  //fill(150,60,29);
-  image(meteor, x, y, size);
+  //circle
+  fill(150,60,29);
+  circle(x, y, size);
   //if statements for circle
   if (x >= 800){
     speedX = (1,10);
@@ -91,8 +79,6 @@ function draw() {
   backButton();
 }
 
-//try to fix this
-//change to moveRocket
 function moveRect(){
   //rect will move with wasd
   //rect

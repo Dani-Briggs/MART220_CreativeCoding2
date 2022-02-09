@@ -130,6 +130,11 @@ function moveRocket(){
   }
 }
 
+function timeIt() {
+  if (timerValue > 0) {
+    timerValue--;
+  }
+}
 
 //backbutton
 function backButton(){

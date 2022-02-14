@@ -7,7 +7,7 @@ class mySquare{
     this.size = size;
   }
 
-  drawsquare()
+  draw()
   {
      square(this.x, this.y, this.size);
   }

@@ -43,7 +43,7 @@ function setup() {
   //array setup
   for(var i = 0; i < 5; i++){
     squareArray[i] = new mySquare(random(10, 50), random(10, 200), random(10, 150));
-    //squareArray[i] = squareOne;
+    squareArray[i] = squareOne;
   }
 }
 
@@ -57,14 +57,14 @@ function draw() {
 
   //Square
   for(var i = 0; i < squareArray.length; i++){
-    squareArray[i].drawsquare();
+    squareArray[i].draw();
   }
 
   //Square --> makes into the star
   //Use the star for the array part of the assignment
   //  fill(100,100,29);
   image(star, 0, 0);
-  
+
 
 
   //timer

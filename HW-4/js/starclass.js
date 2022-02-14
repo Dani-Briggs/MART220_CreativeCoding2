@@ -1,13 +1,13 @@
 class mySquare{
 
-  construstor(x, y,size)
+  construstor(x, y, size)
   {
     this.x = x;
     this.y = y;
     this.size = size;
   }
 
-  draw()
+  drawsquare()
   {
      square(this.x, this.y, this.size);
   }

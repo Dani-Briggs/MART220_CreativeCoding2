@@ -21,6 +21,8 @@ var timerValue = 10;
 var timerX = 750;
 var timerY = 25;
 
+var starArray 
+
 //for images to show start sever
 function preload() {
   meteor = loadImage('assets/meteor.png');
@@ -48,6 +50,7 @@ function draw() {
 
 
   //Square --> makes into the star
+  //Use the star for the array part of the assignment
   //  fill(100,100,29);
   image(star, 0, 0);
   //timer

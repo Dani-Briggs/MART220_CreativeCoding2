@@ -32,6 +32,21 @@ function preload() {
   star = loadImage('assets/star.png');
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 }
+//class
+class mySquare{
+
+  constructor(x, y, size)
+  {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+  }
+
+  drawsquare()
+  {
+     square(this.x, this.y, this.size);
+  }
+}
 
 
 //setting up
@@ -56,8 +71,8 @@ function draw() {
   text('Dani Briggs', 650, 490);
 
   //Square
-  for(var i = 0; i < squareArray.length; i++){
-    squareArray[i].draw();
+  for(var i = 1; i < squareArray.length; i++){
+    squareArray[i].drawsquare();
   }
 
   //Square --> makes into the star

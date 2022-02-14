@@ -21,9 +21,10 @@ var timerValue = 10;
 var timerX = 750;
 var timerY = 25;
 
-var starArray 
+var squareArray = [];
 
-//for images to show start sever
+//remember to start the server
+//for images to show start server
 function preload() {
   meteor = loadImage('assets/meteor.png');
   rocket = loadImage('assets/rocket.png');
@@ -38,6 +39,10 @@ function setup() {
   speedX = random(1,10);
   speedY = random(1,10);
   setInterval(timeIt, 1000);
+  //array setup
+  for(var i = 0; i < 5; i++){
+    squareArray[i] = new mySquare(random(5, 50), random(10, 200), random(10, 150));
+  }
 }
 
 function draw() {
@@ -53,6 +58,12 @@ function draw() {
   //Use the star for the array part of the assignment
   //  fill(100,100,29);
   image(star, 0, 0);
+  //Square 
+  for(var i = 0; i < squareArray.length; i++){
+    squareArray[i].draw();
+  }
+
+
   //timer
   if(timerValue >= 10){
     text("0:" + timerValue, timerX, timerY);

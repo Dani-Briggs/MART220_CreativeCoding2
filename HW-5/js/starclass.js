@@ -1,4 +1,4 @@
-class mySquare{
+class myStar{
 
   construstor(x, y, size)
   {

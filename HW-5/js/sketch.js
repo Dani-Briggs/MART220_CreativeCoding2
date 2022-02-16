@@ -32,21 +32,6 @@ function preload() {
   star = loadImage('assets/star.png');
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 }
-//class
-class mySquare{
-
-  constructor(x, y, size)
-  {
-    this.x = x;
-    this.y = y;
-    this.size = size;
-  }
-
-  drawsquare()
-  {
-     square(this.x, this.y, this.size);
-  }
-}
 
 
 //setting up

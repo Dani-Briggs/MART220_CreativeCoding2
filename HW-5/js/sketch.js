@@ -41,6 +41,7 @@ function setup() {
   speedY = random(1,10);
   setInterval(timeIt, 1000);
   //array setup
+  //change back to star
   for(var i = 0; i < 5; i++){
     squareArray[i] = new mySquare(random(10, 50), random(10, 200), random(10, 150));
     squareArray[i] = squareOne;

@@ -15,22 +15,31 @@ var rectX = 0;
 var rectY = 0;
 var meteor;
 var rocket;
-var star;
-var img;
+//var star;
+//var img;
 var timerValue = 10;
 var timerX = 750;
 var timerY = 25;
 
-var squareArray = [];
-var squareOne;
+//animations
+var star;
+var img;
+var names = [];
+var myImages;
+var i = 0;
+var imagesToDisplay = [];
+var imageClassObject;
 
 //remember to start the server
 //for images to show start server
 function preload() {
   meteor = loadImage('assets/meteor.png');
   rocket = loadImage('assets/rocket.png');
-  star = loadImage('assets/star.png');
+//  star = loadImage('assets/star.png');
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
+
+  //for animations
+  names = loadStrings('./assets/star-color.txt');
 }
 
 

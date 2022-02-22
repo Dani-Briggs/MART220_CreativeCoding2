@@ -51,9 +51,10 @@ function setup() {
   setInterval(timeIt, 1000);
   //array setup
   //change back to star
-  for(var i = 0; i < 5; i++){
-    squareArray[i] = new mySquare(random(10, 50), random(10, 200), random(10, 150));
-    squareArray[i] = squareOne;
+  for(var k = 0; k < names.length; k++){
+    img = loadImage('./assets/stars/' + names[k]);
+    imageClassObject = new starclass(img, 0, 0, 100, 100);
+    imagesToDisplay[k] = imageClassObject;
   }
 }
 
@@ -65,15 +66,13 @@ function draw() {
   text('Homework 4', 10, 21);
   text('Dani Briggs', 650, 490);
 
-  //Square
-  for(var i = 1; i < squareArray.length; i++){
-    squareArray[i].drawsquare();
-  }
-
-  //Square --> makes into the star
-  //Use the star for the array part of the assignment
-  //  fill(100,100,29);
-  image(star, 0, 0);
+  //Star animation
+    image(imagesToDisplay[i].getImage(),
+    imagesToDisplay[i].getX(),
+    imagesToDisplay[i].getY(),
+    imagesToDisplay[i].getW(),
+    imagesToDisplay[i].getH()
+  );
 
 
 

@@ -1,4 +1,4 @@
-class myStar{
+class starclass{
 
   constructor(img, x, y, w, h)
    {

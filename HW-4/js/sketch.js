@@ -71,7 +71,7 @@ function draw() {
   text('Dani Briggs', 650, 490);
 
   //Square
-  for(var i = 1; i < squareArray.length; i++){
+  for(var i = 0; i < squareArray.length; i++){
     squareArray[i].drawsquare();
   }
 

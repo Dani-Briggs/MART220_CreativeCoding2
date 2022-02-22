@@ -22,6 +22,7 @@ var timerX = 750;
 var timerY = 25;
 
 //animations
+
 var star;
 var img;
 var names = [];

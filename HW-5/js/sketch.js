@@ -22,7 +22,6 @@ var timerX = 750;
 var timerY = 25;
 
 //animations
-
 var star;
 var img;
 var names = [];
@@ -36,7 +35,7 @@ var imageClassObject;
 function preload() {
   meteor = loadImage('assets/meteor.png');
   rocket = loadImage('assets/rocket.png');
-//  star = loadImage('assets/star.png');
+//star = loadImage('assets/star.png');
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 
   //for animations
@@ -51,12 +50,15 @@ function setup() {
   speedY = random(1,10);
   setInterval(timeIt, 1000);
   //array setup
-  //change back to star
+
+  //star class
   for(var k = 0; k < names.length; k++){
     img = loadImage('./assets/stars/' + names[k]);
-    imageClassObject = new starclass(img, 0, 0, 100, 100);
+    imageClassObject = new starclass(img, 10, 10, 100, 100);
     imagesToDisplay[k] = imageClassObject;
   }
+
+  setInterval(changeStarColor, 50);
 }
 
 function draw() {
@@ -74,6 +76,8 @@ function draw() {
     imagesToDisplay[i].getW(),
     imagesToDisplay[i].getH()
   );
+
+  changeStarColor();
 
 
 
@@ -165,6 +169,17 @@ function timeIt() {
     timerValue--;
   }
 }
+
+//animate
+function changeStarColor(){
+  i+=1;
+
+  if (i >= imagesToDisplay.length)
+  {
+    i = 0;
+  }
+}
+
 
 //backbutton
 function backButton(){

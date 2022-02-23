@@ -30,8 +30,8 @@ class starclass{
        return this.h;
    }
 
-   moveX(speed)
+  /* moveX(speed)
    {
        this.x += speed;
-   }
+   } */
 }

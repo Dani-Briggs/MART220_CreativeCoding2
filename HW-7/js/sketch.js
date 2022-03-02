@@ -81,7 +81,8 @@ function draw() {
     imagesToDisplay[i].getH()
   );
 
-
+  //add a plant for collsion 
+  //then maybe find a new sprite to replace the rocket
 
 
 

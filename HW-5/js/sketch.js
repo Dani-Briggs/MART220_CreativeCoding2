@@ -178,7 +178,6 @@ function timeIt() {
 //animation for star color
 function changeStarColor(){
   i+=1;
-  console.log(i);
   if (i >= imagesToDisplay.length)
   {
     i = 0;

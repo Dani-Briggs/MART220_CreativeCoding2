@@ -11,8 +11,10 @@ var g = 0;
 var b = 0;
 var mX = 100;
 var mY = 25;
-var rectX = 0;
-var rectY = 0;
+
+//rocket starting point
+var rectX = 20;
+var rectY = 27;
 var meteor;
 var rocket;
 //var star;
@@ -49,16 +51,17 @@ function setup() {
   speedX = random(1,10);
   speedY = random(1,10);
   setInterval(timeIt, 1000);
-  //array setup
 
   //star class
   for(var k = 0; k < names.length; k++){
     img = loadImage('./assets/stars/' + names[k]);
-    imageClassObject = new starclass(img, 10, 10, 100, 100);
+    imageClassObject = new starclass(img, 140, 40, 500, 350);
     imagesToDisplay[k] = imageClassObject;
   }
 
-  setInterval(changeStarColor, 50);
+  //try to make it slower
+  frameRate(10);
+  setInterval(changeStarColor, 1000);
 }
 
 function draw() {
@@ -66,7 +69,7 @@ function draw() {
   fill(r,g,b);
   //text
   textFont(myFont);
-  text('Homework 4', 10, 21);
+  text('Space Game', 10, 21);
   text('Dani Briggs', 650, 490);
 
   //Star animation
@@ -76,6 +79,7 @@ function draw() {
     imagesToDisplay[i].getW(),
     imagesToDisplay[i].getH()
   );
+
 
   changeStarColor();
 
@@ -94,7 +98,7 @@ function draw() {
     text("game over", width / 2 - 167, height / 2);
   }
 
-  //circle --> get a meteor img for this
+   //meteor
   //fill(150,60,29);
   image(meteor, x, y, size);
   //if statements for circle
@@ -141,7 +145,7 @@ function draw() {
   backButton();
 }
 
-//try to fix this
+
 //change to moveRocket
 function moveRocket(){
   //rect will move with wasd
@@ -170,7 +174,7 @@ function timeIt() {
   }
 }
 
-//animate
+//animation for star color
 function changeStarColor(){
   i+=1;
 

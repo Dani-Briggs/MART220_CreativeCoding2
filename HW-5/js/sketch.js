@@ -60,7 +60,7 @@ function setup() {
   }
 
   //try to make it slower
-  frameRate(10);
+  //frameRate(10);
   setInterval(changeStarColor, 1000);
 }
 
@@ -69,6 +69,7 @@ function draw() {
   fill(r,g,b);
   //text
   textFont(myFont);
+  textSize(26);
   text('Space Game', 10, 21);
   text('Dani Briggs', 650, 490);
 
@@ -81,7 +82,7 @@ function draw() {
   );
 
 
-  changeStarColor();
+
 
 
 
@@ -177,7 +178,7 @@ function timeIt() {
 //animation for star color
 function changeStarColor(){
   i+=1;
-
+  console.log(i);
   if (i >= imagesToDisplay.length)
   {
     i = 0;

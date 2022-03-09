@@ -105,6 +105,7 @@ function draw() {
   image(meteor, x, y, size);
   //if statements for meteors
   //maybe change it to particle class
+  //like a small particle 
   if (x >= 800){
     speedX = (1,10);
     speedX = -speedX;

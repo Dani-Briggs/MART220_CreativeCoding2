@@ -81,7 +81,7 @@ function draw() {
     imagesToDisplay[i].getH()
   );
 
-  //add a plant for collsion 
+  //add a plant for collsion
   //then maybe find a new sprite to replace the rocket
 
 
@@ -103,7 +103,8 @@ function draw() {
    //meteor
   //fill(150,60,29);
   image(meteor, x, y, size);
-  //if statements for circle
+  //if statements for meteors
+  //maybe change it to particle class
   if (x >= 800){
     speedX = (1,10);
     speedX = -speedX;

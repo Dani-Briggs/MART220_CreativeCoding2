@@ -16,7 +16,7 @@ var mY = 25;
 var rectX = 20;
 var rectY = 27;
 var meteor;
-var rocket;
+var ship;
 //var star;
 //var img;
 var timerValue = 10;
@@ -52,7 +52,8 @@ function setup() {
   speedY = random(1,10);
   setInterval(timeIt, 1000);
 
-  meteor = createSprite(200, 300);
+  //meteor position
+  meteor = createSprite(690, 30);
   meteor.addImage(loadImage('assets/meteor.png'));
 
   //star class
@@ -105,7 +106,7 @@ function draw() {
 
    //meteor
    drawSprites();
-   meteor.debug = mouseIsPressed;
+
   //fill(150,60,29);
   image(meteor, x, y, size);
   //if statements for meteors
@@ -149,9 +150,12 @@ function draw() {
   mX = mY + speedX;
   mY = mX + speedY;
 
+
+
   moveRocket();
 
   backButton();
+
 }
 
 
@@ -160,7 +164,7 @@ function moveRocket(){
   //rect will move with wasd
   //rect
   fill(20,100,29);
-  image(rocket,rectX, rectY, 40, 70);
+  image(ship,rectX, rectY, 40, 70);
   if(keyIsPressed){
     if(key == 'a'){
       rectX-=5;

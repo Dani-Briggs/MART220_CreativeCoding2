@@ -52,7 +52,7 @@ function setup() {
   speedY = random(1,10);
   setInterval(timeIt, 1000);
 
-  meteor = createSprite(700, 300);
+  meteor = createSprite(200, 300);
   meteor.addImage(loadImage('assets/meteor.png'));
 
   //star class

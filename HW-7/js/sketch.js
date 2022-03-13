@@ -35,8 +35,8 @@ var imageClassObject;
 //remember to start the server
 //for images to show start server
 function preload() {
-  meteor = loadImage('assets/meteor.png');
-  rocket = loadImage('assets/rocket.png');
+//  meteor = loadImage('assets/meteor.png');
+  rocket = loadImage('assets/ship.png');
 //star = loadImage('assets/star.png');
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 
@@ -51,6 +51,9 @@ function setup() {
   speedX = random(1,10);
   speedY = random(1,10);
   setInterval(timeIt, 1000);
+
+  meteor = createSprite(700, 300);
+  meteor.addImage(loadImage('assets/meteor.png'));
 
   //star class
   for(var k = 0; k < names.length; k++){
@@ -81,7 +84,7 @@ function draw() {
     imagesToDisplay[i].getH()
   );
 
-  //add a plant for collsion
+  //add a planet for collsion
   //then maybe find a new sprite to replace the rocket
 
 
@@ -101,11 +104,13 @@ function draw() {
   }
 
    //meteor
+   drawSprites();
+   meteor.debug = mouseIsPressed;
   //fill(150,60,29);
   image(meteor, x, y, size);
   //if statements for meteors
   //maybe change it to particle class
-  //like a small particle 
+  //like a small particle
   if (x >= 800){
     speedX = (1,10);
     speedX = -speedX;

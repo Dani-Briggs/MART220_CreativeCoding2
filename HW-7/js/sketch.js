@@ -36,7 +36,7 @@ var imageClassObject;
 //for images to show start server
 function preload() {
 //  meteor = loadImage('assets/meteor.png');
-  rocket = loadImage('assets/ship.png');
+//  rocket = loadImage('assets/ship.png');
 //star = loadImage('assets/star.png');
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 
@@ -55,6 +55,9 @@ function setup() {
   //meteor position
   meteor = createSprite(690, 30);
   meteor.addImage(loadImage('assets/meteor.png'));
+
+  rocket = createSprite(690, 30);
+  rocket.addImage(loadImage('assets/ship.png'));
 
   //star class
   for(var k = 0; k < names.length; k++){
@@ -163,7 +166,7 @@ function draw() {
 function moveRocket(){
   //rect will move with wasd
   //rect
-  fill(20,100,29);
+  //fill(20,100,29);
   image(ship,rectX, rectY, 40, 70);
   if(keyIsPressed){
     if(key == 'a'){

@@ -2,11 +2,11 @@
 class Particle {
 
   constructor() {
-    this.x = 300;
-    this.y = 380;
-    this.vx = random(-1, 1);
-    this.vy = random(-5, -1);
-    this.alpha = 255;
+    this.x = random(-300, 800);
+    this.y = 490;
+    this.vx = random(-60, 60);
+    this.vy = random(-5, -100);
+    this.alpha = 155;
   }
 
   finished() {

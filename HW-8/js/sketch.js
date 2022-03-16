@@ -159,21 +159,37 @@ function draw() {
 if(keyDown('d'))
  {
    ship.velocity.x +=.5;
+   if(ship.collide(meteor))
+      {
+        ship.velocity.x = 0;
+      }
  }
 
 else if(keyDown('a'))
   {
     ship.velocity.x -=.5;
+    if(ship.collide(meteor))
+       {
+         ship.velocity.x = 0;
+       }
   }
 
  else if(keyDown('w'))
   {
     ship.velocity.y -=.5;
+    if(ship.collide(meteor))
+       {
+         ship.velocity.y = 0;
+       }
   }
 
 else if(keyDown('s'))
   {
     ship.velocity.y +=.5;
+    if(ship.collide(meteor))
+       {
+         ship.velocity.y = 0;
+       }
   }
   else
   {

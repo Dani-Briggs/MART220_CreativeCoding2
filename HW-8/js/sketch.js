@@ -36,7 +36,7 @@ var imageClassObject;
 //for images to show start server
 function preload() {
 //  meteor = loadImage('assets/meteor.png');
-  rocket = loadImage('assets/ship.png');
+//  rocket = loadImage('assets/ship.png');
 //star = loadImage('assets/star.png');
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 
@@ -53,8 +53,12 @@ function setup() {
   setInterval(timeIt, 1000);
 
   //meteor position
-  meteor = createSprite(690, 30);
+  meteor = createSprite(130, 30);
   meteor.addImage(loadImage('assets/meteor.png'));
+
+  //ship sprite
+  ship = createSprite(10, 30);
+  ship.addImage(loadImage('assets/ship.png'));
 
   //star class
   for(var k = 0; k < names.length; k++){
@@ -88,9 +92,6 @@ function draw() {
   //add a planet for collsion
   //then maybe find a new sprite to replace the rocket
 
-
-
-
   //timer
   if(timerValue >= 10){
     text("0:" + timerValue, timerX, timerY);
@@ -104,14 +105,16 @@ function draw() {
     text("game over", width / 2 - 167, height / 2);
   }
 
-   //meteor
-   drawSprites();
+
 
   //fill(150,60,29);
-  image(meteor, x, y, size);
+  //image(meteor, x, y, size);
   //if statements for meteors
+  //either velocity or position
   //maybe change it to particle class
-  //like a small particle
+  meteor.velocity.x = speedX;
+  meteor.velocity.y = speedY;
+
   if (x >= 800){
     speedX = (1,10);
     speedX = -speedX;
@@ -152,34 +155,41 @@ function draw() {
 
 
 
-  moveRocket();
+//  moveRocket();
+if(keyDown('d'))
+ {
+   ship.velocity.x +=.5;
+ }
+
+else if(keyDown('a'))
+  {
+    ship.velocity.x -=.5;
+  }
+
+ else if(keyDown('w'))
+  {
+    ship.velocity.y -=.5;
+  }
+
+else if(keyDown('s'))
+  {
+    ship.velocity.y +=.5;
+  }
+  else
+  {
+    ship.velocity.y = 0;
+    ship.velocity.x = 0;
+  }
+
+
+
+  //meteor & ship
+  drawSprites();
 
   backButton();
 
 }
 
-
-//change to moveRocket
-function moveRocket(){
-  //rect will move with wasd
-  //rect
-  fill(20,100,29);
-  image(ship,rectX, rectY, 40, 70);
-  if(keyIsPressed){
-    if(key == 'a'){
-      rectX-=5;
-    }
-    else if (key == 'd') {
-      rectX+=5;
-    }
-    else if (key == 'w') {
-      rectY-=5;
-    }
-    else if (key == 's') {
-      rectY+=5;
-    }
-  }
-}
 
 function timeIt() {
   if (timerValue > 0) {

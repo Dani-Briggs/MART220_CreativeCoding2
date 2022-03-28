@@ -49,6 +49,17 @@ function preload() {
 //setting up
 function setup() {
   createCanvas(800, 500, WEBGL);
+
+//planet
+for(let m = 0; m < 5; m++)
+{
+   let myT = new planetclass(50, 15, 24, 24, locationX, locationY);
+   spheres.push(myT);
+   locationX += 50;
+   locationY += 50;
+}
+
+
   speedX = random(1,10);
   speedY = random(1,10);
   setInterval(timeIt, 1000);

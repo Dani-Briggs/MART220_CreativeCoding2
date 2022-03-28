@@ -9,8 +9,8 @@ var speedMY = 0;
 var r = 0;
 var g = 0;
 var b = 0;
-var mX = 100;
-var mY = 25;
+var mX = -300;
+var mY = -225;
 
 //rocket starting point
 var rectX = 20;
@@ -20,8 +20,8 @@ var ship;
 //var star;
 //var img;
 var timerValue = 10;
-var timerX = 750;
-var timerY = 25;
+var timerX = 290;
+var timerY = -205;
 
 //animations
 var star;
@@ -48,7 +48,7 @@ function preload() {
 
 //setting up
 function setup() {
-  createCanvas(800, 500);
+  createCanvas(800, 500, WEBGL);
   speedX = random(1,10);
   speedY = random(1,10);
   setInterval(timeIt, 1000);
@@ -58,13 +58,13 @@ function setup() {
   meteor.addImage(loadImage('assets/meteor.png'));
 
   //ship sprite
-  ship = createSprite(10, 30);
+  ship = createSprite(-340, 3);
   ship.addImage(loadImage('assets/ship.png'));
 
   //star class
   for(var k = 0; k < names.length; k++){
     img = loadImage('./assets/stars/' + names[k]);
-    imageClassObject = new starclass(img, 140, 40, 500, 350);
+    imageClassObject = new starclass(img, -240, -200, 500, 350);
     imagesToDisplay[k] = imageClassObject;
   }
 
@@ -79,8 +79,8 @@ function draw() {
   //text
   textFont(myFont);
   textSize(26);
-  text('Space Game', 10, 21);
-  text('Dani Briggs', 650, 490);
+  text('Space Game', -380, -210);
+  text('Dani Briggs', 240, 240);
 
   //Star animation
     image(imagesToDisplay[i].getImage(),
@@ -116,7 +116,7 @@ function draw() {
   if(timerValue == 0){
     fill(200,0,0);
     textSize(76);
-    text("game over", width / 2 - 167, height / 2);
+    text("game over", width / 2 - 547, height / 2 - 250);
   }
 
 

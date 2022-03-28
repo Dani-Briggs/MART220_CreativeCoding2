@@ -6,3 +6,5 @@
 [HW 5 & 6](https://dani-briggs.github.io/MART220_CreativeCoding2/HW-5/)
 [HW 7](https://dani-briggs.github.io/MART220_CreativeCoding2/HW-7/)
 [HW 8](https://dani-briggs.github.io/MART220_CreativeCoding2/HW-8/)
+[HW 9](https://dani-briggs.github.io/MART220_CreativeCoding2/HW-9/)
+[HW 11](https://dani-briggs.github.io/MART220_CreativeCoding2/HW-11/)

@@ -58,6 +58,7 @@ function setup() {
   setInterval(timeIt, 1000);
 
   //planet
+  //add a texture 
   for(let m = 0; m < 5; m++)
   {
      let myP = new planetclass(50, 24, 24, locationX, locationY);

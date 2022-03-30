@@ -60,7 +60,7 @@ function setup() {
   //planet
   for(let m = 0; m < 5; m++)
   {
-     let myP = new planetclass(50, 15, 164, 24, locationX, locationY);
+     let myP = new planetclass(50, 24, 24, locationX, locationY);
      spheres.push(myP);
     // locationX += 50;
     // locationY += 50;

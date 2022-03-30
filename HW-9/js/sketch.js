@@ -58,7 +58,7 @@ function setup() {
   setInterval(timeIt, 1000);
 
   //planet
-  //add a texture 
+  //add a texture
   for(let m = 0; m < 5; m++)
   {
      let myP = new planetclass(50, 24, 24, locationX, locationY);
@@ -111,8 +111,10 @@ function draw() {
 {
   push();
   //spheres[i].translatePlanet();
+  normalMaterial();
   spheres[n].rotatePlanet(frameCount * .01);
   spheres[n].show();
+
   pop();
 
 

@@ -11,6 +11,10 @@ var g = 0;
 var b = 0;
 var mX = -300;
 var mY = -225;
+//planet
+var locationX = 100;
+var locationY = 100;
+var spheres = [];
 
 //rocket starting point
 var rectX = 20;
@@ -53,10 +57,10 @@ function setup() {
 //planet
 for(let m = 0; m < 5; m++)
 {
-   let myT = new planetclass(50, 15, 24, 24, locationX, locationY);
-   spheres.push(myT);
-   locationX += 50;
-   locationY += 50;
+   let myP = new planetclass(50, 15, 24, 24, locationX, locationY);
+   spheres.push(myP);
+  // locationX += 50;
+  // locationY += 50;
 }
 
 
@@ -102,6 +106,17 @@ function draw() {
   );
 
   //add a planet for collsion
+  //the push and pop need to STAY 
+  for(let n = 0; n < spheres.length; n++)
+{
+  push();
+  //spheres[i].translatePlanet();
+  spheres[i].rotatePlanet(frameCount * .01);
+  spheres[i].show();
+  pop();
+
+
+}
   //Particles
   for (let i = 0; i < 5; i++) {
    let p = new Particle();

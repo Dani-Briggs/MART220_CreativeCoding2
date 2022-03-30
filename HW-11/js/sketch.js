@@ -1,3 +1,6 @@
+//vars
+var img;
+
 
 function preload() {
   myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
@@ -6,7 +9,7 @@ function preload() {
 
 //setting up
 function setup() {
-  createCanvas(800, 500);
+  createCanvas(800, 500, WEBGL);
 
 }
 

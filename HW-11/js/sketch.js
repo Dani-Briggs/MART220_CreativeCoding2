@@ -1,4 +1,6 @@
-//vars
+//vars & lets
+let myModel;
+let myTexture;
 var img;
 
 

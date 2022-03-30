@@ -53,20 +53,19 @@ function preload() {
 //setting up
 function setup() {
   createCanvas(800, 500, WEBGL);
-
-//planet
-for(let m = 0; m < 5; m++)
-{
-   let myP = new planetclass(50, 15, 24, 24, locationX, locationY);
-   spheres.push(myP);
-  // locationX += 50;
-  // locationY += 50;
-}
-
-
   speedX = random(1,10);
   speedY = random(1,10);
   setInterval(timeIt, 1000);
+
+  //planet
+  for(let m = 0; m < 5; m++)
+  {
+     let myP = new planetclass(50, 15, 164, 24, locationX, locationY);
+     spheres.push(myP);
+    // locationX += 50;
+    // locationY += 50;
+  }
+
 
   //meteor position
   meteor = createSprite(130, 30);
@@ -105,14 +104,14 @@ function draw() {
     imagesToDisplay[i].getH()
   );
 
-  //add a planet for collsion
-  //the push and pop need to STAY 
+  // Planet
+  //the push and pop need to STAY
   for(let n = 0; n < spheres.length; n++)
 {
   push();
   //spheres[i].translatePlanet();
-  spheres[i].rotatePlanet(frameCount * .01);
-  spheres[i].show();
+  spheres[n].rotatePlanet(frameCount * .01);
+  spheres[n].show();
   pop();
 
 

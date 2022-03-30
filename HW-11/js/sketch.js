@@ -1,12 +1,6 @@
 
 function preload() {
-//  meteor = loadImage('assets/meteor.png');
-//  rocket = loadImage('assets/ship.png');
-//star = loadImage('assets/star.png');
-  myFont = loadFont('assets/SupermercadoOne-Regular.ttf');
 
-  //for animations
-  names = loadStrings('./assets/star-color.txt');
 }
 
 

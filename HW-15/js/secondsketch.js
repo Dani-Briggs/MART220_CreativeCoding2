@@ -18,20 +18,37 @@ function setup() {
     frameRate(25);
     noStroke();
     rectMode(CENTER);
+
+    for(var k = 0; k < names.length; k++){
+      img = loadImage('./assets/scams/' + names[k]);
+      imageClassObject = new movieclass(img, -240, -200, 500, 350);
+      imagesToDisplay[k] = imageClassObject;
+    }
+
+    //try to make it slower
+    //frameRate(10);
+    setInterval(changePic, 1000);
 }
 function draw() {
-    fill(random(mainColor),random(mainColor),random(mainColor), random(100));
 
-    var size= random(200);
+}
+let image(imagesToDisplay[i].getImage(),
+imagesToDisplay[i].getX(),
+imagesToDisplay[i].getY(),
+imagesToDisplay[i].getW(),
+imagesToDisplay[i].getH()
+);
 
-    circle(random(width), random(height), size);
-
-    if (frameCount % 2 == 0) {
-        mainColor = 255 - mainColor; // 255 0 255 0 255 0 ..
-    }
     saveFrames("myMovie",".png",1,25);
 
     if (frameCount > 25) { // 1 second * 25 fps = 25
         noLoop();
     }
+
+function changePic(){
+  i+=1;
+  if (i >= imagesToDisplay.length)
+  {
+    i = 0;
+  }
 }
